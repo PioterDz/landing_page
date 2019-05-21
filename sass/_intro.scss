@@ -1,0 +1,48 @@
+.intro {
+    width: 100%;
+    height: 570px;
+    .services {
+        text-align: center;
+        padding-top: 10vh;
+        h1 {
+            @include header-of-section($headline-size);
+        }
+        p {
+            @include subheader-of-section($subheader-headline-size);
+        }
+    }
+    .list-of-icons {
+        .responsive-web {
+            margin: 0 20px;
+        }
+        padding-top: 5vh;
+        @include flex(row, center, center);
+        margin: 0 20vw;
+        text-align: center;
+        .list-of-services {
+            grid-area: 2/1/3/1;
+            h2, p {
+                font-family: $font-family;
+            }
+            .icon {
+                @include square-size(80px, 80px);
+                display: inline-block;
+                width: 100%;
+                position: relative;
+                right: 5%;
+                i {
+                    color: $gold-color;
+                    font-size: $headline-size;
+                }
+                .fas {
+                    position: absolute;
+                    top: 75%;
+                    left: 50%;
+                }
+                .fa-circle {
+                    font-size: 80px;
+                }
+            }
+        }
+    }
+}

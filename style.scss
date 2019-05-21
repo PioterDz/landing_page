@@ -1,8 +1,19 @@
-@import './mixins';
-@import './hero';
-@import './intro';
-
-.container {
-    width: 1400px;
-
+body {
+    width: 100%;
+    margin: 0;
+    .container {
+        max-width: 1400px;
+    }
 }
+@import 'sass/variables';
+@import 'sass/mixins';
+@import 'sass/hero';
+@import 'sass/intro';
+@import 'sass/portfolio';
+@import 'sass/about';
+@import 'sass/team';
+@import 'sass/partners';
+@import 'sass/contact-form';
+@import 'sass/footer';
+@import 'sass/mediaqueries';
+

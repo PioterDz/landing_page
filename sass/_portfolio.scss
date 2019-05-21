@@ -1,0 +1,83 @@
+.portfolio {
+    text-align: center;
+    background-color: $light-grey-color;
+    height: 1200px;
+    .portfolio-text {
+        padding: 120px 0 80px 0;
+        header {
+            @include header-of-section($headline-size);
+        }
+        p {
+            @include subheader-of-section($subheader-headline-size);
+        }
+    }
+    .portfolio-gallery {
+        display: grid;
+        height: 840px;
+        grid-template-columns: 10% 25% 2.5% 25% 2.5% 25% 10%;
+        grid-template-rows: 37% 10% 6% 37% 10%;
+        .image {
+            img {
+                @include square-size(100%,100%);
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .gal-text {
+            background-color: white;
+            h1 {
+                font-size: 16px;
+                font-family: $font-family;
+                font-weight: bold;
+            }
+            p {
+                font-size: 12px;
+                font-family: $font-family;
+                font-style: oblique;
+                color: $grey-color;
+            }
+            &:hover {
+                cursor: pointer;
+                background-color: $gold-color;
+            }
+        }
+
+        .gal-1 {
+            grid-area: 1/2/2/3;
+        }
+        .gal-text-1 {
+            grid-area: 2/2/3/3;
+        }
+        .gal-2 {
+            grid-area: 1/4/2/5;
+        }
+        .gal-text-2 {
+            grid-area: 2/4/3/5;
+        }
+        .gal-3 {
+            grid-area: 1/6/2/7;
+        }
+        .gal-text-3 {
+            grid-area: 2/6/2/7;
+        }
+        .gal-4 {
+            grid-area: 4/2/5/3;
+        }
+        .gal-text-4 {
+            grid-area: 5/2/6/3;
+        }
+        .gal-5 {
+            grid-area: 4/4/5/5;
+        }
+        .gal-text-5 {
+            grid-area: 5/4/6/5;
+        }
+        .gal-6 {
+            grid-area: 4/6/5/7;
+        }
+        .gal-text-6 {
+            grid-area: 5/6/6/7;
+        }
+    }
+}

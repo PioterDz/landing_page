@@ -1,0 +1,46 @@
+.contact-form {
+    @include flex(column, center, center);
+    header {
+        @include flex(column, center, center);
+        h1 {
+            @include header-of-section($headline-size);
+            color: white;
+        }
+        p {
+            @include subheader-of-section($subheader-headline-size);
+        }
+    }
+    background-image: url('https://images.pexels.com/photos/41949/earth-earth-at-night-night-lights-41949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    height: 100vh;
+    form {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        margin-top: 30px;
+        @include square-size(60%,200px);
+        .inputs {
+            grid-area: 1/1/2/2;
+            @include flex(column, center, center);
+            @include square-size(100%, 170px);
+            input {
+                @include font(16px, grey, uppercase);
+                @include square-size(380px, 20px);
+                margin-right: 25px;
+                padding: 10px 0 10px 10px;
+            }
+            .input-1, .input-2 {
+                margin-bottom: 20px;
+            }
+        }
+        textarea {
+            grid-area: 1/2/2/3;
+            @include font(16px, grey, uppercase);
+            @include square-size(380px, 160px);
+            padding: 10px 0 0 10px;
+            margin-left: 25px;
+        }
+    }
+    button {
+        @include yellow-button;
+    }
+}

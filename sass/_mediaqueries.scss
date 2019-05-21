@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+    nav {
+        @include flex(column, center, center);
+    }
+    .intro {
+        @include flex(column, center, center);
+        height: 1000px;
+        .list-of-icons {
+            @include flex(column, center, center);
+        }
+    }
+    .portfolio {
+        @include flex(column, center, center);
+        height: 2700px;
+        .portfolio-text {
+            padding: 0;
+        }
+        .portfolio-gallery {
+            @include flex(column, center, center);
+        }
+    }
+
+
+    .team {
+        .team-mates {
+            width: 100%;
+            @include flex(column, center, center);
+        }
+    }
+    .contact-form {
+        background-position: center;
+        form {
+            @include flex(column, center, center);
+            .inputs {
+                input {
+                    width: 100%;
+                    margin: 0 0 10px 0;
+                }
+            }
+            textarea {
+                width: 100%;
+                margin: 0;
+            }
+        }
+        .yellow-button {
+            padding: 25px 85px;
+            margin-top: 5px;
+        }
+    }
+}
