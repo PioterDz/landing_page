@@ -11,6 +11,7 @@
         }
         p {
             @include subheader-of-section($subheader-headline-size);
+            text-align: center;
         }
     }
     .calendar {

@@ -8,6 +8,7 @@
         }
         p {
             @include subheader-of-section($subheader-headline-size);
+            text-align: center;
         }
     }
     background-image: url('https://images.pexels.com/photos/41949/earth-earth-at-night-night-lights-41949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');

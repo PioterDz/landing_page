@@ -19,6 +19,9 @@ nav {
         filter: brightness(50%);
         z-index: -1;
     }
+    .fa-bars {
+        display: none;
+    }
     .logo {
         grid-area: 1/2/1/3;
         font-family: 'Satisfy', cursive;
@@ -51,11 +54,13 @@ nav {
             @include font(38px, white, capitalize);
             font-style: oblique;
             font-weight: 200;
+            text-align: center;
         }
         header {
             margin-top: 50px;
             @include header-of-section(56px);
             color: white;
+            text-align: center;
         }
         button {
             @include yellow-button;
