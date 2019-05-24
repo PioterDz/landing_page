@@ -5,7 +5,7 @@ body {
 
 .jumbotron {
   position: relative;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .jumbotron:after {
@@ -1045,6 +1045,9 @@ footer .socialmedia i:hover {
   .jumbotron nav .show a {
     margin-bottom: 20px;
   }
+  .jumbotron .hero .no-show {
+    display: none;
+  }
   .jumbotron .hero button {
     padding: 20px 70px;
   }
@@ -1063,6 +1066,7 @@ footer .socialmedia i:hover {
         -ms-flex-align: center;
             align-items: center;
     height: 1000px;
+    padding: 0;
   }
   .intro .services {
     padding: 0;
@@ -1130,6 +1134,9 @@ footer .socialmedia i:hover {
         grid-template-rows: 100px 5fr;
     margin-top: 50px;
   }
+  .about .about-head {
+    margin-bottom: 15px;
+  }
   .about .calendar {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
@@ -1152,7 +1159,7 @@ footer .socialmedia i:hover {
   }
   .about .calendar .date .note p {
     font-size: 12px;
-    width: 75%;
+    width: 68%;
   }
   .about .calendar .date .note-1 {
     display: -webkit-box;
@@ -1221,6 +1228,9 @@ footer .socialmedia i:hover {
   .about .calendar .date .image::after {
     -webkit-transform: translate(0, 75%);
             transform: translate(0, 75%);
+  }
+  .about .calendar .calendar-button {
+    margin-bottom: 50px;
   }
   .team .team-mates {
     width: 100%;
