@@ -1,5 +1,5 @@
 .about {
-    height: 1600px;
+    min-height: 1300px;
     display: grid;
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 1fr 5fr;
@@ -33,6 +33,9 @@
                 h2 {
                     @include font(24px, black, capitalize);
                     margin: 0;
+                }
+                p {
+                    color: $grey-color;
                 }
             }
             .image {

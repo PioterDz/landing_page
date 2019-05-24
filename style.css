@@ -3,24 +3,12 @@ body {
   margin: 0;
 }
 
-body .container {
-  max-width: 1400px;
-}
-
-nav {
-  padding-top: 40px;
-  height: 900px;
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2.3fr 1fr 3.6fr 5fr 2.3fr;
-      grid-template-columns: 2.3fr 1fr 3.6fr 5fr 2.3fr;
-  -ms-grid-rows: 34px;
-      grid-template-rows: 34px;
+.jumbotron {
   position: relative;
+  min-height: 80vh;
 }
 
-nav:after {
+.jumbotron:after {
   content: "";
   display: block;
   position: absolute;
@@ -35,11 +23,24 @@ nav:after {
   z-index: -1;
 }
 
-nav .fa-bars {
-  display: none;
+.jumbotron nav {
+  padding-top: 40px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-nav .logo {
+.jumbotron nav .logo {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -50,11 +51,15 @@ nav .logo {
   text-transform: capitalize;
 }
 
-nav .logo:hover {
+.jumbotron nav .logo:hover {
   cursor: pointer;
 }
 
-nav .navigation {
+.jumbotron nav .logo .bar {
+  display: none;
+}
+
+.jumbotron nav .navigation {
   -ms-grid-row: 1;
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
@@ -63,7 +68,7 @@ nav .navigation {
   padding: 10px;
 }
 
-nav .navigation a {
+.jumbotron nav .navigation a {
   font-size: 15px;
   color: white;
   text-decoration: none;
@@ -72,11 +77,11 @@ nav .navigation a {
   margin-left: 10px;
 }
 
-nav .navigation a:hover {
+.jumbotron nav .navigation a:hover {
   color: #FFD700;
 }
 
-nav .hero {
+.jumbotron .hero {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -97,7 +102,7 @@ nav .hero {
           align-items: center;
 }
 
-nav .hero h1 {
+.jumbotron .hero h1 {
   font-size: 38px;
   color: white;
   text-decoration: none;
@@ -108,7 +113,7 @@ nav .hero h1 {
   text-align: center;
 }
 
-nav .hero header {
+.jumbotron .hero header {
   margin-top: 50px;
   font-size: 56px;
   font-family: "Lato", sans-serif;
@@ -118,7 +123,7 @@ nav .hero header {
   text-align: center;
 }
 
-nav .hero button {
+.jumbotron .hero button {
   padding: 33px 125px;
   background-color: #FFD700;
   color: white;
@@ -129,19 +134,22 @@ nav .hero button {
   text-transform: uppercase;
 }
 
-nav .hero button:hover {
+.jumbotron .hero button:hover {
   cursor: pointer;
   background-color: #7D7C7A;
 }
 
+.jumbotron .move {
+  margin-top: 100px;
+}
+
 .intro {
   width: 100%;
-  height: 570px;
+  padding: 50px 0;
 }
 
 .intro .services {
   text-align: center;
-  padding-top: 10vh;
 }
 
 .intro .services h1 {
@@ -192,6 +200,10 @@ nav .hero button:hover {
   font-family: "Lato", sans-serif;
 }
 
+.intro .list-of-icons .list-of-services p {
+  color: #7D7C7A;
+}
+
 .intro .list-of-icons .list-of-services .icon {
   width: 80px;
   height: 80px;
@@ -219,11 +231,10 @@ nav .hero button:hover {
 .portfolio {
   text-align: center;
   background-color: #E5E5E5;
-  height: 1200px;
 }
 
 .portfolio .portfolio-text {
-  padding: 120px 0 80px 0;
+  padding: 50px;
 }
 
 .portfolio .portfolio-text header {
@@ -243,16 +254,18 @@ nav .hero button:hover {
 .portfolio .portfolio-gallery {
   display: -ms-grid;
   display: grid;
-  height: 840px;
   -ms-grid-columns: 10% 25% 2.5% 25% 2.5% 25% 10%;
       grid-template-columns: 10% 25% 2.5% 25% 2.5% 25% 10%;
   -ms-grid-rows: 37% 10% 6% 37% 10%;
       grid-template-rows: 37% 10% 6% 37% 10%;
+  padding-bottom: 30px;
 }
 
 .portfolio .portfolio-gallery .image img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .portfolio .portfolio-gallery .image:hover {
@@ -377,7 +390,7 @@ nav .hero button:hover {
 }
 
 .about {
-  height: 1600px;
+  min-height: 1300px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 15% 70% 15%;
@@ -470,6 +483,10 @@ nav .hero button:hover {
   text-transform: capitalize;
   font-family: "Lato", sans-serif;
   margin: 0;
+}
+
+.about .calendar .date .note p {
+  color: #7D7C7A;
 }
 
 .about .calendar .date .image {
@@ -686,6 +703,10 @@ nav .hero button:hover {
   background-color: #E5E5E5;
 }
 
+.team header, .team p {
+  text-align: center;
+}
+
 .team header {
   font-size: 32px;
   font-family: "Lato", sans-serif;
@@ -729,6 +750,8 @@ nav .hero button:hover {
   height: 220px;
   border-radius: 50%;
   background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .team .team-mates .team-mate h2 {
@@ -985,20 +1008,26 @@ footer .socialmedia i:hover {
 }
 
 @media (max-width: 768px) {
-  nav {
+  .jumbotron {
+    min-height: 150vh;
+  }
+  .jumbotron:after {
+    background-position: center;
+  }
+  .jumbotron nav {
     display: block;
   }
-  nav .logo {
+  .jumbotron nav .logo {
     margin-left: 10px;
   }
-  nav .logo .bar {
+  .jumbotron nav .logo .bar {
     display: inline;
     margin-right: 20px;
   }
-  nav .navigation {
+  .jumbotron nav .navigation {
     display: none;
   }
-  nav .show {
+  .jumbotron nav .show {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1009,15 +1038,15 @@ footer .socialmedia i:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  nav .show a {
+  .jumbotron nav .show a {
     margin-bottom: 20px;
   }
-  nav .move {
-    margin-top: 100px;
+  .jumbotron .hero button {
+    padding: 20px 70px;
   }
   .intro {
     display: -webkit-box;
@@ -1091,6 +1120,7 @@ footer .socialmedia i:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 80px;
   }
   .portfolio .portfolio-gallery .image img {
     height: 300px;
@@ -1098,7 +1128,6 @@ footer .socialmedia i:hover {
   .about {
     -ms-grid-rows: 100px 5fr;
         grid-template-rows: 100px 5fr;
-    height: 1300px;
     margin-top: 50px;
   }
   .about .calendar {
@@ -1122,7 +1151,7 @@ footer .socialmedia i:hover {
     width: 85%;
   }
   .about .calendar .date .note p {
-    font-size: 10px;
+    font-size: 12px;
     width: 75%;
   }
   .about .calendar .date .note-1 {
@@ -1244,7 +1273,7 @@ footer .socialmedia i:hover {
     margin: 15px 0 0 0;
   }
   .contact-form .yellow-button {
-    padding: 25px 85px;
+    padding: 20px 70px;
     margin-top: 25px;
   }
   footer {

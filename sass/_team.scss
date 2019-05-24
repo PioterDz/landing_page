@@ -1,6 +1,9 @@
 .team {
     @include flex(column, center, center);
     background-color: $light-grey-color;
+    header, p {
+        text-align: center;
+    }
     header {
         @include header-of-section($headline-size);
         margin-top: 100px;
@@ -17,6 +20,7 @@
                 @include square-size(220px, 220px);
                 border-radius: 50%;
                 background-position: center;
+                object-fit: cover;
             }
             h2 {
                 @include header-of-section(16px);

@@ -1,9 +1,8 @@
 .portfolio {
     text-align: center;
     background-color: $light-grey-color;
-    height: 1200px;
     .portfolio-text {
-        padding: 120px 0 80px 0;
+        padding: 50px;
         header {
             @include header-of-section($headline-size);
         }
@@ -13,12 +12,13 @@
     }
     .portfolio-gallery {
         display: grid;
-        height: 840px;
         grid-template-columns: 10% 25% 2.5% 25% 2.5% 25% 10%;
         grid-template-rows: 37% 10% 6% 37% 10%;
+        padding-bottom: 30px;
         .image {
             img {
                 @include square-size(100%,100%);
+                object-fit: cover;
             }
             &:hover {
                 cursor: pointer;
