@@ -1,0 +1,55 @@
+.team {
+    @include flex(column, center, center);
+    background-color: $light-grey-color;
+    header, p {
+        text-align: center;
+    }
+    header {
+        @include header-of-section($headline-size);
+        margin-top: 100px;
+    }
+    p {
+        @include subheader-of-section($subheader-headline-size);
+    }
+    .team-mates {
+        display: flex;
+        .team-mate {
+            margin: 25px;
+            @include flex(column, center, center);
+            img {
+                @include square-size(220px, 220px);
+                border-radius: 50%;
+                background-position: center;
+                object-fit: cover;
+            }
+            h2 {
+                @include header-of-section(16px);
+                margin-bottom: 0;
+            }
+            p {
+                @include subheader-of-section(14px);
+                margin-top: 0;
+            }
+            .social-icons {
+                .fa-stack {
+                    &:hover {
+                        cursor: pointer;
+                        color: $gold-color;
+                    }
+                    .fa-circle {
+                        font-size: 32px;
+                    }
+                }
+            }
+
+        }
+    }
+    .team-note {
+        max-width: 65%;
+        p {
+            font-style: normal;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+    }
+}

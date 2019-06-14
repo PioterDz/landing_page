@@ -1,0 +1,157 @@
+@media (max-width: 768px) {
+    .jumbotron {
+        min-height: 150vh;
+        &:after {
+            background-position: center;
+        }
+        nav {
+            display: block;
+            .logo {
+                .bar {
+                    display: inline;
+                    margin-right: 20px;
+                }
+                margin-left: 10px;
+            }
+            .navigation {
+                display: none;
+            }
+            .show {
+                @include flex(column, center, center);
+                a {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .hero {
+            .no-show {
+                display: none;
+            }
+            button {
+                padding: 20px 70px;
+            }
+        }
+    }
+    .intro {
+        @include flex(column, center, center);
+        height: 1000px;
+        padding: 0;
+        .services {
+            padding: 0;
+        }
+        .list-of-icons {
+            @include flex(column, center, center);
+        }
+    }
+    .portfolio {
+        padding-top: 50px;
+        @include flex(column, center, center);
+        height: 2500px;
+        position: relative;
+        .portfolio-text {
+            padding: 0;
+            position: absolute;
+            transform: translate(0,-1180px);
+        }
+        .portfolio-gallery {
+            @include flex(column, center, center);
+            padding-top: 80px;
+            .image {
+                img {
+                    height: 300px;
+                }
+            }
+        }
+    }
+    .about {
+        grid-template-rows: 100px 5fr;
+        margin-top: 50px;
+        .about-head {
+            margin-bottom: 15px;
+        }
+        .calendar {
+            grid-area: 2/1/3/4;
+            grid-template-rows: 75% 25%;
+            .date {
+                grid-template-rows: repeat(4, 230px);
+                .note {
+                    h1 {
+                        font-size: 16px;
+                    }
+                    h2 {
+                        font-size: 16px;
+                        width: 85%;
+                    }
+                    p {
+                        font-size: 12px;
+                        width: 68%;
+                    }
+                }
+                .note-1 {
+                    @include flex(column, center, flex-start);
+                    text-align: left;
+                }
+                .note-2 {
+                    @include flex(column, center, flex-end);
+                    text-align: right;
+                }
+                .note-3 {
+                    @include flex(column, center, flex-start);
+                    text-align: left;
+                }
+                .note-4 {
+                    @include flex(column, center, flex-end);
+                    text-align: right;
+                }
+                .image {
+                    &::after {
+                        transform: translate(0, 75%);
+                    }
+                }
+            }
+            .calendar-button {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    .team {
+        .team-mates {
+            width: 100%;
+            @include flex(column, center, center);
+        }
+    }
+    .partners {
+        margin: 0;
+        height: 100px;
+        img {
+            width: 16%;
+        }
+    }
+    .contact-form {
+        background-position: center;
+        form {
+            @include flex(column, center, center);
+            height: 300px;
+            .inputs {
+                input {
+                    width: 100%;
+                    margin: 0 0 10px 0;
+                }
+            }
+            textarea {
+                width: 100%;
+                margin: 15px 0 0 0;
+            }
+        }
+        .yellow-button {
+            padding: 20px 70px;
+            margin-top: 25px;
+        }
+    }
+    footer {
+        @include flex(row, center, center);
+        p {
+            font-size: 10px;
+        }
+    }
+}

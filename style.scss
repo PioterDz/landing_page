@@ -1,0 +1,16 @@
+body {
+    width: 100%;
+    margin: 0;
+}
+@import 'sass/variables';
+@import 'sass/mixins';
+@import 'sass/hero';
+@import 'sass/intro';
+@import 'sass/portfolio';
+@import 'sass/about';
+@import 'sass/team';
+@import 'sass/partners';
+@import 'sass/contact-form';
+@import 'sass/footer';
+@import 'sass/mediaqueries';
+
